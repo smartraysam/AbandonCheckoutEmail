@@ -1,0 +1,7 @@
+node_modules
+*.sqlite
+.env
+.serverless/abandoncheckoutemail.zip
+.serverless/cloudformation-template-create-stack.json
+.serverless/cloudformation-template-update-stack.json
+.serverless/serverless-state.json

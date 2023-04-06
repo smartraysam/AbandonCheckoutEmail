@@ -1,0 +1,20 @@
+service: abandoncheckoutemail
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  timeout: 30
+  region: us-east-2
+  memorySize: 512
+functions:
+  app:
+    handler: index.handler
+    events: 
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
